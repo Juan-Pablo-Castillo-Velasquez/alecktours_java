@@ -13,6 +13,8 @@ public class Reserva {
     @Column(name = "id_reserva")
     private Integer idReserva;
 
+
+    
     @Column(name = "id_cliente")
     private Integer idCliente;
 

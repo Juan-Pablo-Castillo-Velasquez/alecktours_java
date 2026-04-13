@@ -50,4 +50,29 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> manejarClienteNoEncontrado(ClienteNoEncontradoException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
     }
+
+    @ExceptionHandler(PaisNoEncontradoException.class)
+    public ResponseEntity<String> manejarPaisNoEncontrado(PaisNoEncontradoException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(CiudadNoEncontradoException.class)
+    public ResponseEntity<String> manejarCiudadNoEncontrado(CiudadNoEncontradoException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(DireccionNoEncontradoException.class)
+    public ResponseEntity<String> manejarDireccionNoEncontrado(DireccionNoEncontradoException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(PaqueteNoEncontradoException.class)
+    public ResponseEntity<String> manejarPaqueteNoEncontrado(PaqueteNoEncontradoException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+
+    @ExceptionHandler(ReservaNoEncontradoException.class)
+    public ResponseEntity<String> manejarReservaNoEncontrado(ReservaNoEncontradoException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
 }

@@ -12,7 +12,8 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_cliente")
     private Integer idCliente;
-
+    
+    
     private String nombre;
     private String apellido;
     private String cedula;

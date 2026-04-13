@@ -23,6 +23,11 @@ public class SecutiryConfig {
                         // Rutas públicas (NO requieren autenticación)
                         .requestMatchers("/api/reservas/**").permitAll()
                         .requestMatchers("/h2-console/**").permitAll()
+                        // ===== SWAGGER/OpenAPI =====
+                        .requestMatchers("/v3/api-docs/**").permitAll()
+                        .requestMatchers("/swagger-ui/**").permitAll()
+                        .requestMatchers("/swagger-ui.html").permitAll()
+                        .requestMatchers("/webjars/**").permitAll()
 
                         // ===== CONFIGURACIÓN DE ROLES =====
                         // Solo ADMIN puede crear, actualizar o eliminar reservas
